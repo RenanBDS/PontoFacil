@@ -1,0 +1,130 @@
+/* Linha original 1: Inicia o bloco de estilos aplicado ao seletor :root. */
+:root {
+  /* Linha original 2: Define a variável CSS --primary-color para reutilizar este valor de forma consistente. */
+  --primary-color: #2563EB;
+  /* Linha original 3: Define a variável CSS --primary-dark para reutilizar este valor de forma consistente. */
+  --primary-dark: #1D4ED8;
+  /* Linha original 4: Define a variável CSS --primary-soft para reutilizar este valor de forma consistente. */
+  --primary-soft: #EFF6FF;
+  /* Linha original 5: Define a variável CSS --success-color para reutilizar este valor de forma consistente. */
+  --success-color: #10B981;
+  /* Linha original 6: Define a variável CSS --warning-color para reutilizar este valor de forma consistente. */
+  --warning-color: #F59E0B;
+  /* Linha original 7: Define a variável CSS --danger-color para reutilizar este valor de forma consistente. */
+  --danger-color: #EF4444;
+  /* Linha original 8: Define a variável CSS --tertiary-color para reutilizar este valor de forma consistente. */
+  --tertiary-color: #E2E8F0;
+  /* Linha original 9: Define a variável CSS --neutral-color para reutilizar este valor de forma consistente. */
+  --neutral-color: #F8FAFC;
+  /* Linha original 10: Define a variável CSS --text-primary para reutilizar este valor de forma consistente. */
+  --text-primary: #0F172A;
+  /* Linha original 11: Define a variável CSS --text-secondary para reutilizar este valor de forma consistente. */
+  --text-secondary: #334155;
+  /* Linha original 12: Define a variável CSS --text-muted para reutilizar este valor de forma consistente. */
+  --text-muted: #64748B;
+/* Linha original 13: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 15: Inicia o bloco de estilos aplicado ao seletor body. */
+body {
+  /* Linha original 16: Define o espaçamento externo com o valor 0. */
+  margin: 0;
+  /* Linha original 17: Define a cor do texto com o valor var(--text-primary). */
+  color: var(--text-primary);
+  /* Linha original 18: Define o fundo com o valor var(--neutral-color). */
+  background: var(--neutral-color);
+  /* Linha original 19: Define a família de fontes com o valor Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif. */
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+/* Linha original 20: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 22: Inicia o bloco de estilos aplicado ao seletor .btn-primary. */
+.btn-primary {
+  /* Linha original 23: Define a cor de fundo com o valor var(--primary-color). */
+  background-color: var(--primary-color);
+  /* Linha original 24: Define a cor da borda com o valor var(--primary-color). */
+  border-color: var(--primary-color);
+/* Linha original 25: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 27: Continua a lista de seletores que receberão o mesmo bloco de estilos. */
+.btn-primary:hover,
+/* Linha original 28: Inicia o bloco de estilos aplicado ao seletor .btn-primary:focus. */
+.btn-primary:focus {
+  /* Linha original 29: Define a cor de fundo com o valor var(--primary-dark). */
+  background-color: var(--primary-dark);
+  /* Linha original 30: Define a cor da borda com o valor var(--primary-dark). */
+  border-color: var(--primary-dark);
+/* Linha original 31: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 33: Inicia o bloco de estilos aplicado ao seletor .auth-card. */
+.auth-card {
+  /* Linha original 34: Define a cor de fundo com o valor #fff. */
+  background-color: #fff;
+  /* Linha original 35: Define a borda com o valor 1px solid var(--tertiary-color). */
+  border: 1px solid var(--tertiary-color);
+  /* Linha original 36: Arredonda os cantos com o valor 16px. */
+  border-radius: 16px;
+  /* Linha original 37: Aplica sombra ao elemento com o valor 0 10px 30px rgba(15, 23, 42, 0.08). */
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  /* Linha original 38: Controla conteúdo que ultrapassa os limites com o valor hidden. */
+  overflow: hidden;
+/* Linha original 39: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 41: Inicia o bloco de estilos aplicado ao seletor .auth-header. */
+.auth-header {
+  /* Linha original 42: Define o fundo com o valor linear-gradient(135deg, var(--primary-color), var(--primary-dark)). */
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  /* Linha original 43: Define a cor do texto com o valor #fff. */
+  color: #fff;
+  /* Linha original 44: Define o espaçamento interno com o valor 30px. */
+  padding: 30px;
+  /* Linha original 45: Define o alinhamento do texto com o valor center. */
+  text-align: center;
+/* Linha original 46: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 48: Inicia o bloco de estilos aplicado ao seletor .auth-header p. */
+.auth-header p {
+  /* Linha original 49: Define a cor do texto com o valor #DBEAFE. */
+  color: #DBEAFE;
+/* Linha original 50: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 52: Inicia o bloco de estilos aplicado ao seletor .form-control:focus. */
+.form-control:focus {
+  /* Linha original 53: Define a cor da borda com o valor var(--primary-color). */
+  border-color: var(--primary-color);
+  /* Linha original 54: Aplica sombra ao elemento com o valor 0 0 0 0.25rem rgba(37, 99, 235, 0.15). */
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.15);
+/* Linha original 55: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 57: Inicia o bloco de estilos aplicado ao seletor a. */
+a {
+  /* Linha original 58: Define a cor do texto com o valor var(--primary-color). */
+  color: var(--primary-color);
+/* Linha original 59: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 61: Inicia o bloco de estilos aplicado ao seletor a:hover. */
+a:hover {
+  /* Linha original 62: Define a cor do texto com o valor var(--primary-dark). */
+  color: var(--primary-dark);
+/* Linha original 63: Encerra o bloco de regras CSS iniciado anteriormente. */
+}
+
+/* Linha original 65: Inicia o bloco de estilos aplicado ao seletor .page-heading. */
+.page-heading {
+  /* Linha original 66: Define o modelo de layout com o valor flex. */
+  display: flex;
+  /* Linha original 67: Distribui os itens no eixo principal com o valor space-between. */
+  justify-content: space-between;
+  /* Linha original 68: Alinha os itens no eixo transversal com o valor center. */
+  align-items: center;
+  /* Linha original 69: Define o espaço entre itens com o valor 20px. */
+  gap: 20px;
+/* Linha original 70: Encerra o bloco de regras CSS iniciado anteriormente. */
+}

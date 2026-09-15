@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+// Esta linha informa ao sistema que o arquivo deve ser executado com o Node.js disponível no ambiente.
+
+// Importa '../app' e guarda a referência na constante app.
+const app = require('../app')
+// Importa o módulo HTTP nativo do Node.js, usado para criar o servidor.
+const http = require('http')
+
+// Lê a porta definida no .env e usa 3000 como padrão se ela não existir.
+const port = process.env.PORT || '3000'
+// Salva a porta escolhida nas configurações internas da aplicação Express.
+app.set('port', port)
+
+// Cria o servidor HTTP usando a aplicação Express como manipulador das requisições.
+const server = http.createServer(app)
+
+// Inicia o servidor e faz com que ele escute conexões na porta configurada.
+server.listen(port)
+// Associa a função onError ao evento de erro do servidor.
+server.on('error', onError)
+// Associa a função onListening ao evento disparado quando o servidor começa a escutar.
+server.on('listening', onListening)
+
+// Declara a função que trata erros ocorridos ao iniciar ou manter o servidor HTTP.
+function onError(error) {
+  // Se o erro não estiver relacionado à tentativa de escutar a porta, ele é repassado.
+  if (error.syscall !== 'listen') {
+    // Interrompe a operação e encaminha o erro para o tratamento central da API.
+    throw error
+  }
+
+  // Cria uma descrição legível da porta ou pipe usado pelo servidor.
+  const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`
+
+  // Analisa o código do erro para mostrar uma mensagem específica.
+  switch (error.code) {
+    // Trata o caso em que o processo não tem permissão para usar a porta.
+    case 'EACCES':
+      // Informa que seriam necessários privilégios maiores para usar a porta.
+      console.error(`${bind} requires elevated privileges`)
+      // Encerra o processo com código 1 para indicar falha.
+      process.exit(1)
+      // Encerra este caso do switch.
+      break
+    // Trata o caso em que a porta já está sendo usada por outro processo.
+    case 'EADDRINUSE':
+      // Informa que a porta escolhida já está ocupada.
+      console.error(`${bind} is already in use`)
+      // Encerra o processo com código 1 para indicar falha.
+      process.exit(1)
+      // Encerra este caso do switch.
+      break
+    // Trata qualquer outro código de erro que não tenha caso específico.
+    default:
+      // Interrompe a operação e encaminha o erro para o tratamento central da API.
+      throw error
+  // Fecha o bloco de código ou objeto atual.
+  }
+// Fecha o bloco de código ou objeto atual.
+}
+
+// Declara a função executada quando o servidor inicia corretamente.
+function onListening() {
+  // Exibe no terminal o endereço em que a API está disponível.
+  console.log(`Ponto Fácil API is running on http://localhost:${port}`)
+// Fecha o bloco de código ou objeto atual.
+}
